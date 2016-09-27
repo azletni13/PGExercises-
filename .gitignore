@@ -1,2 +1,3 @@
 settings.json
 node_modules
+heroku pg:psql --app heroku-postgres-994fa9a4 HEROKU_POSTGRESQL_MAROON
