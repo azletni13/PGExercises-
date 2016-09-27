@@ -22,7 +22,3 @@ knex.insert([{first_name: firstName, last_name: lastName, birthdate: birthDate}]
 knex.destroy();
 });
 
-// knex.('famous_people').insert([{first_name: firstName}, {last_name: lastName}, {birthdate: birthDate}])
-// .finally(function() {
-// knex.destroy();
-// });

@@ -19,9 +19,8 @@ knex.select().from('famous_people')
 .where('first_name', name).orWhere('last_name', name)
 .then(function(result){
   console.log("Searching ...")
-  // console.log(result[0].id)
   console.log(`Found ${result.length} person(s) by the name "${name}":\n -${result[0].id}: ${result[0].first_name} ${result[0].last_name}, born ${result[0].birthdate}`);
 })
-.finally(function() {
-knex.destroy();
-});
+// .finally(function() {
+.knex.destroy();
+// });
