@@ -13,11 +13,11 @@ const knex = require("knex")({
   }
 });
 
-// var firstName = process.argv[2];
-// var lastName = process.argv[3];
-// var birthDate = process.argv[4];
+var firstName = process.argv[2];
+var lastName = process.argv[3];
+var birthDate = process.argv[4];
 
-knex.insert([{first_name: 'Amna', last_name: 'Zletni', birthdate: '1991-12-13'}]).into('famous_people')
+knex.insert([{first_name: firstName, last_name: lastName, birthdate: birthDate}]).into('famous_people')
 .finally(function() {
 knex.destroy();
 });
